@@ -82,7 +82,7 @@ renhe-hospital
 1. 确认 MySQL 已启动。
 2. 双击 `start.bat`。
 3. 按提示输入 MySQL 密码，直接回车使用默认密码 `123456`。
-4. 脚本会启动服务并自动打开 `http://localhost:8080`。
+4. 脚本会启动服务，启动成功后手动打开 `http://localhost:8080`。
 
 首次启动会自动创建数据库、8 张表和演示数据，需要 MySQL 账号具备建库建表权限。若数据库账号权限受限，可先手动导入脚本：
 
@@ -94,7 +94,7 @@ mysql -u root -p < database/renhe_hospital.sql
 
 ```bash
 cd renhe-hospital
-./mvnw spring-boot:run
+./mvnw -s settings.xml spring-boot:run
 ```
 
 Windows：
